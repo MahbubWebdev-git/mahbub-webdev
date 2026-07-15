@@ -52,4 +52,4 @@ RUN chown -R www-data:www-data /var/www/html \
 EXPOSE 80
 
 # FINAL TRIGGER: Run migration, seed, clear cache, and start Apache Web Server
-CMD php artisan migrate --force && php artisan db:seed --force && php artisan route:clear && php artisan config:clear && php artisan cache:clear && php artisan view:clear && apache2-foreground
+CMD php artisan config:clear && php artisan cache:clear && php artisan view:clear && apache2-foreground
