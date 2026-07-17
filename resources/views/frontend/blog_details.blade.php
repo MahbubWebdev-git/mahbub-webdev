@@ -41,7 +41,7 @@
                 <div class="col-lg-8">
                     <div class="standard__blog__post">
                         <div class="standard__blog__thumb">
-                            <img src="{{ asset($blogs->blog_image) }}" alt="">
+                            <img src="{{ asset($blogs->blog_image) }}" class="img-fluid w-100" alt="">
                         </div>
                         <div class="blog__details__content services__details__content">
                             <ul class="blog__post__meta">
