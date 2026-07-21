@@ -166,10 +166,11 @@ return [
     | By setting this option to true, session cookies will only be sent back
     | to the server if the browser has a HTTPS connection. This will keep
     | the cookie from being sent to you when it can't be done securely.
+    | 'secure' => env('SESSION_SECURE_COOKIE'),
     |
     */
 
-    'secure' => env('SESSION_SECURE_COOKIE'),
+    'secure' => false,
 
     /*
     |--------------------------------------------------------------------------
@@ -182,7 +183,7 @@ return [
     |
     */
 
-    'http_only' => env('SESSION_HTTP_ONLY', true),
+    'http_only' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -199,7 +200,7 @@ return [
     |
     */
 
-    'same_site' => env('SESSION_SAME_SITE', 'lax'),
+    'same_site' => lax,
 
     /*
     |--------------------------------------------------------------------------
@@ -212,6 +213,6 @@ return [
     |
     */
 
-    'partitioned' => env('SESSION_PARTITIONED_COOKIE', false),
+    'partitioned' =>false,
 
 ];
