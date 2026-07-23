@@ -11,6 +11,22 @@ class FooterController extends Controller
     public function FooterSetup()
     {
         $allfooter = Footer::find(1);
+
+        if (!$allfooter) {
+            $allfooter = new Footer();
+            $allfooter->number = '';
+            $allfooter->short_description = '';
+            $allfooter->address = '';
+            $allfooter->email = '';
+            $allfooter->facebook = '';
+            $allfooter->twitter = '';
+            $allfooter->linkedin = '';
+            $allfooter->behance = '';
+            $allfooter->instagram = '';
+            $allfooter->copyright = '';
+            $allfooter->save();
+        }
+
         return view('admin.footer.footer_all', compact('allfooter'));
     }
 
@@ -39,3 +55,4 @@ class FooterController extends Controller
         return redirect()->back()->with($notification);
     }
 }
+

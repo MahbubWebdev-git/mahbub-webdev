@@ -15,12 +15,12 @@
             <form method="post" action="{{ route('update.footer') }}" >
                 @csrf
 
-                <input type="hidden" name="id" value="{{ $allfooter->id }}">
+                <input type="hidden" name="id" value="{{ $allfooter->id ?? '' }}">
 
             <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label">Number</label>
                 <div class="col-sm-10">
-                    <input name="number" class="form-control" type="text" value="{{ $allfooter->number }}"  id="example-text-input">
+                    <input name="number" class="form-control" type="text" value="{{ $allfooter->number ?? "" }}"  id="example-text-input">
                 </div>
             </div>
             <!-- end row -->
@@ -31,7 +31,7 @@
                 <label for="example-text-input" class="col-sm-2 col-form-label">Short Description </label>
                 <div class="col-sm-10">
                     <textarea required="" name="short_description"  class="form-control" rows="5">
-                 {{ $allfooter->short_description }}
+                 {{ $allfooter->short_description ?? "" }}
                     </textarea>
                 </div>
             </div>
@@ -40,7 +40,7 @@
             <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label">Adress</label>
                 <div class="col-sm-10">
-                    <input name="adress" class="form-control" type="text" value="{{ $allfooter->adress }}"  id="example-text-input">
+                    <input name="address" class="form-control" type="text" value="{{ $allfooter->address ?? "" }}"  id="example-text-input">
                 </div>
             </div>
             <!-- end row -->
@@ -48,7 +48,7 @@
             <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label">  Email</label>
                 <div class="col-sm-10">
-                    <input name="email" class="form-control" type="email" value="{{ $allfooter->email }}"  id="example-text-input">
+                    <input name="email" class="form-control" type="email" value="{{ $allfooter->email ?? "" }}"  id="example-text-input">
                 </div>
             </div>
             <!-- end row -->
@@ -56,7 +56,7 @@
             <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label">Facebook</label>
                 <div class="col-sm-10">
-                    <input name="facebook" class="form-control" type="text" value="{{ $allfooter->facebook }}"  id="example-text-input">
+                    <input name="facebook" class="form-control" type="text" value="{{ $allfooter->facebook ?? "" }}"  id="example-text-input">
                 </div>
             </div>
             <!-- end row -->
@@ -65,7 +65,7 @@
             <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label">Twitter</label>
                 <div class="col-sm-10">
-                    <input name="twitter" class="form-control" type="text" value="{{ $allfooter->twitter }}"  id="example-text-input">
+                    <input name="twitter" class="form-control" type="text" value="{{ $allfooter->twitter ?? "" }}"  id="example-text-input">
                 </div>
             </div>
             <!-- end row -->
@@ -73,7 +73,7 @@
             <div class="row mb-3">
                 <label for="example-text-input" class="col-sm-2 col-form-label">Copyright</label>
                 <div class="col-sm-10">
-                    <input name="copyright" class="form-control" type="text" value="{{ $allfooter->copyright }}"  id="example-text-input">
+                    <input name="copyright" class="form-control" type="text" value="{{ $allfooter->copyright ?? "" }}"  id="example-text-input">
                 </div>
             </div>
             <!-- end row -->
