@@ -4,7 +4,8 @@ return [
 
     'allowed_origins' => [
     'http://localhost:5173',
-    'https://mahbub.webdev.com' 
+    'http://127.0.0.1:5173',
+    'https://mahbub.dreamwebdev.com' 
 ],
 
 
