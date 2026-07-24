@@ -14,9 +14,6 @@
 /.vscode
 /.zed
 /public/hot
-/public/index.php
-/public/robots.txt
-/public/.htaccess
 /auth.json
 /node_modules
 /public/build
